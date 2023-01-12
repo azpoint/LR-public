@@ -1,0 +1,75 @@
+<%- include('./templates/head') -%>
+<body>
+    <%- include('./templates/navbar') -%>
+    <%- include('./templates/sideNavbar') -%>
+
+    
+    <section class="video-container" id="header">
+        <%- include('./templates/downArrowSVG') -%>
+        <video src="/assets/loop-header-sequence.mp4" class="header-video" autoplay muted loop></video>
+    </section>
+
+
+
+    <section class="infoArrow">
+        <div class="central-text">
+            <h2>Who is this &ee;Book for?</h2>
+
+            <p>This eBook is written for anyone who wants to improve their surfacing skills and achieve curvature continuity surfaces without plug-ins and expensive CAD software. This 3D car modeling tutorial is a step by step exercise to model a Porsche 911, including a detailed illustrated explanations and why we use commands in certain cases starting from a blueprint.</p>
+
+            <p>You may use this eBook either with Rhinoceros 5.0 or above, the commands used in here are in any version of the software, once you finish the model you will achieve the skills to model almost anything in a clean and precise way.</p>
+
+            <p>The tutorial seeks to fill the void in this type of training for people who learn at his own pace, it is full of viewport captures graphically detailed on how to use the tools, it will be specially useful for industrial designers who needs practice to master this modeling techniques.
+            </p>
+
+            <p>This eBook is intended for users with some previous experience with Rhinoceros, if you are lack of experience or you come from another software, my recommendation for you is to study level 1 and 2 of Rhino manuals to have a strong fundation on the software. You can find the level 1 manual here: <a href="http://docs.mcneel.com/rhino/6/training-level1/en-us/Default.htm#topics/00_introduction.htm%3FTocPath%3D_____3" target="_blank">Rhinoceros Level 1 Manual</a> and many more resources at <a href="https://www.rhino3d.com/learn/?query=kind:%20jump_start%20l&modal=null" target="_blank">rhino3d.com/learn/</a>.</p>
+        </div>
+
+        <div class="buttons-container">
+            <button class="buyButton" onclick="location.href='./products'">Buy Now!</button>
+        </div>
+
+        <%- include('./templates/downArrowSVG') -%>
+    </section>
+    <section class="video-container">
+        <video src="/assets/lr-promo.mp4" class="header-video" muted controls autoplay loop></video>
+    </section>
+    <section class="infoArrow">
+        <div class="central-text">
+            <h2>External References</h2>
+
+            <div class="link-list">
+            <ul>
+                <li><a href="https://www.food4rhino.com/en/resource/master-rhino-surfacing" target="_blank">food4rhino.com</a></li>
+                <li><a href="http://blog.rhino3d.com/2019/01/mastering-surfacing-in-rhino-by.html" target="_blank">blog.rhino3d.com - eBook Announcement - Blog Post</a></li>
+                <li><a href="https://discourse.mcneel.com/t/mastering-surfacing-in-rhino-by-alejandro-zapata/77712" target="_blank">Rhinoceros Forums - eBook Announcement - Forum Post</a></li>
+                <li><a href="http://blog.rhino3d.com/2021/04/mastering-surfacing-in-rhino-webinar.html" target="_blank">blog.rhino3d.com - Webminar - Blog Post</a></li>
+                <li><a href="https://www.rhino3d.education/courses/webinars-for-rhino3d-education/lectures/31835698" target="_blank">rhino3d.education - Webminar</a></li>
+            </ul>
+            </div>
+        </div>
+
+        <div class="buttons-container">
+            <button class="buyButton" onclick="location.href='./products'">Buy Now!</button>
+        </div>
+
+        <div class="central-text">
+            <hr>
+            <h2>More on nurbs and Rhinoceros</h2>
+
+            <img src="/assets/rhinoceros-logo.png" class="rhino-logo">
+
+            <p>Unlike other modeling techniques popular among DCC softwares (Digital Content Creation) like poly-modeling in which you have lots of flexibility, in traditional NURBS modeling (Non-uniform Rational Basis Spline) there is no much room for mistakes and you have to think forward how you going to model the surfaces to avoid corrections some times requiring to re-do parts or the whole model, in this exercise you will learn to think in advance to minimize this type of mistakes.</p>
+
+            <p>Despite the challenges the NURBS modeling have, this mathematical model is used to calculate curves and surfaces and is the most used technique in CAD software (Computer-Aided Desing), CAM (Computer-Aided Manufacturing) y CAE (Computer-Aided Engineering) for it's presicion that cannot be matched by others techniques, essential feature to design and produce goods. Another important feature for designers is how easy to edit curves due to its highly intuitive and predictable use.</p>
+
+            <p><a href="https://www.rhino3d.com/" target="_blank">Rhinoceros 3D&reg;</a> is one of the most comprehensive, and powerful 3D modeling programs on the market, widely used in computer-aided design and manufacturing (CAD / CAM), rapid prototyping, 3D printing, and reverse engineering in sectors as diverse as architecture, industrial design (vehicle and boat design), product design (such as jewelry), as well as multimedia design and graphic design.</p>
+            
+            <p>The latest version of <a href="https://www.rhino3d.com/" target="_blank">Rhinoceros 3D&reg;</a> can be downloaded only for Windows and Mac computers <a href="https://www.rhino3d.com/download" target="_blank">(https://www.rhino3d.com/download)</a>. An evaluation version is available, which is a full version valid for 90 days.</p>
+        </div>
+    </section>
+    <%- include('./templates/footer') -%>
+    <script src="/js/navbar.js"></script>
+    <script src="/js/sideNavbar.js"></script>
+</body>
+</html>

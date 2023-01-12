@@ -1,0 +1,15 @@
+.inter-header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .inter-header {
+        max-width: 800px;
+        filter: drop-shadow(5px 5px 8px rgba(0, 0, 0, 0.438));
+    }
+}
+
+.inter-header {
+    max-width: 800px;
+    filter: drop-shadow(5px 5px 8px rgba(0, 0, 0, 0.438));
+}

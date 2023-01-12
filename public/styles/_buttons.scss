@@ -1,0 +1,69 @@
+.buyButton {
+	position: relative;
+	background-color: transparent;
+	border-radius: 0.25rem;
+	display: inline-block;
+	cursor:pointer;
+	color: $colorFontYellow;
+	font-family: $fontMontserrat;
+	border: 2px solid $colorFontYellow;
+	font-size: 1.2rem;
+	font-weight: 600;
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+    min-width: fit-content;
+	overflow: hidden;
+	text-transform: uppercase;
+	text-align: center;
+
+
+	&::before {
+		content: '';
+		width: 105%;
+		height: 105%;
+		background-color: $colorFontYellow;
+		position: absolute;
+		top: 0;
+		left: 100%;
+		clip-path: polygon(70% 0, 100% 0, 100% 100%, 0 100%);
+		transition: all 0.3s;
+	}
+
+	&:hover::before {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		color: $colorBackgroundDark;
+		left: 0;
+		z-index: -1;
+	}
+
+	&:hover {
+		color: $colorBackgroundDark;
+	}
+
+	&:active {
+		transform: translateY(2px);
+	}
+}
+
+
+.buttons-container {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    button {
+        margin: 1rem 1rem;
+    }
+}
+
+.buttons-container-calendar {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+
+    button {
+        margin: 1rem 1rem;
+    }
+}
+

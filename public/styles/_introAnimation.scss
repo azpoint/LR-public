@@ -1,0 +1,140 @@
+.introContainer {
+    position: relative;
+    width: 100%;
+    max-width: 2000px;
+    height: calc(($introWidth/16)*8);
+    background-color: $colorBackground;
+    top: 0;
+    // left: calc(50% - $introWidth/2);
+    overflow: hidden;
+    z-index: -2;
+
+    img {
+        position: absolute;
+        width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        visibility: hidden;
+        animation: slide-animation 20s linear infinite;
+        z-index: 0;
+        clip-path: polygon(40% 0, 80% 0, 60% 100%, 20% 100%);
+        transform: scale(1);
+    }
+
+    h2 {
+        position: absolute;
+        text-transform: uppercase;
+        font-size: 10vw;
+        animation: srf-mst 20s linear infinite backwards;
+        text-shadow: rgba($color: #000000, $alpha: 0.2) 3px 3px 3px;
+    }
+
+    .downArrow {
+        position: relative;
+        left: calc(50% - (15vw/2));
+        top: 75%;
+    }
+}
+
+.introContainer h2:nth-of-type(1) {
+    font-family: 'Raleway';
+    top: 10%;
+    left: 10%;
+    color: $colorFontLightBlue;
+    animation-delay: 2s;
+}
+
+.introContainer h2:nth-of-type(2) {
+    top: calc((50% - 7vw) - 2.5%);
+    right: 25%;
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-style: italic;
+    color: $colorFontLight;
+    animation-delay: 3s;
+}
+
+.introContainer h2:nth-of-type(3) {
+    bottom: 20%;
+    right: 10%;
+    color: $colorLightRed;
+    animation-delay: 4s;
+}
+
+.introContainer h2:nth-of-type(4) {
+    top: 25%;
+    left: 15%;
+    color: $colorFontYellow;
+    animation-delay: 12s;
+    text-align: center;
+}
+
+@keyframes srf-mst {
+    0% {
+        transform: translateX(240%);
+        opacity: 1;
+    }
+    2% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    33% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.introContainer img:nth-child(1) {
+    transform: translateX(-110%);
+}
+
+.introContainer img:nth-child(2) {
+    transform: translateX(110%);
+    animation-delay: 4s;
+}
+
+.introContainer img:nth-child(3) {
+    transform: translateX(-110%);
+    animation-delay: 8s;
+}
+
+.introContainer img:nth-child(4) {
+    transform: translateX(110%);
+    animation-delay: 12s;
+}
+
+.introContainer img:nth-child(5) {
+    transform: translateX(-110%);
+    animation-delay: 16s;
+}
+
+
+@keyframes slide-animation {
+    0% { 
+        visibility: visible;
+    }
+    5% {
+        clip-path: polygon(40% 0, 80% 0, 60% 100%, 20% 100%);
+        transform: scale(1);
+    }
+    6.25% {
+        transform: translateX(0);
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+    25% {
+        transform: translateX(0);
+        z-index: -1;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+        transform: scale(1.1);
+    }
+    30% {
+        transform: translateX(0);
+        z-index: -1;
+        visibility: hidden;
+    }
+}

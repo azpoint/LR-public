@@ -1,0 +1,103 @@
+#navbar {
+    width: 100%;
+    height: calc((100vw/100)*7);
+    background: linear-gradient(0deg, rgba($color: $colorBackgroundDark, $alpha: 0) 0%, rgba($color: $colorBackgroundDark, $alpha: 0.5) 2.5%, rgba($color: $colorBackgroundLight, $alpha: 1) 12%);
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+
+    .progress-container {
+        width: 100%;
+        // height: 5px;
+        position: absolute;
+    }
+
+    .progress-bar {
+        height: 5px;
+        background: $colorLightRed;
+        width: 0%;
+    }
+
+    .navbarContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        height: 100%;
+
+        a {
+            height: 80%;
+        }
+
+        .navbarSmallLogo {
+            height: 100%;
+            margin-left: 1rem;
+            cursor: pointer;
+        }
+
+        .navbarFulllLogo {
+            height: 80%;
+            margin: 0.5rem 0;
+            cursor: pointer;
+        }
+
+        .navbarMenuIcon {
+            height: 100%;
+        }
+
+        ul {
+            display: flex;
+            margin: 0 1rem 0 0;
+            padding: 0;
+        }
+
+        ul a {
+            color: $colorFontLight;
+            text-decoration: none;
+        }
+
+        ul li {
+            list-style: none;
+            font-size: 0.7rem;
+            // padding: 1rem 1rem 0.8rem 1rem;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        ul li::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: $colorLightRed;
+            bottom: 0.5rem;
+            left: -100%;
+		    transition: all 0.3s;
+        }
+
+        ul li:hover::before {
+            left: 0;
+        }
+
+        ul li:active::before {
+            bottom: 0.2rem;
+        }
+
+        ul li:hover {
+            color: $colorFontYellow;
+        }
+    }    
+}
+
+
+.sticky {
+    position: fixed;
+    top: 0;
+}
+
+.navbarOffsetMargin {
+    padding-top: calc((100vw/100)*7);
+}
+

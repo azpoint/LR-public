@@ -1,0 +1,32 @@
+#sideNavbar-container {
+    position: fixed;
+    flex-direction: column;
+    z-index: 100;
+    top: 30%;
+    right: -360px;
+    background-color: $colorBackgroundLight;
+    padding: 1rem 0;
+    box-shadow: -5px 5px $colorLightRed, -10px 10px 8px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 0 0 0 10px;
+    transition: all 0.4s;
+
+    ul {
+        a {
+            list-style: none;
+            text-decoration: none;
+            li {
+                padding: 0.5rem 2rem 0.5rem 1rem;
+                color: $colorFontLight;
+            }
+        }
+    }
+
+    ul li:hover {
+        background-color: $colorLightRed;
+        color: $colorFontYellow;
+    }
+}
+
+.is-open {
+    transform: translateX(-350px);
+}

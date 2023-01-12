@@ -1,0 +1,82 @@
+<%- include('./templates/head') -%>
+<body>
+  <section class="infoArrow">
+    <div class="central-text checkout-max-width">
+      <div class="product-detail-checkout">
+        <img src="<%= product.cover %>" />
+        <div class="text-detail">
+          <div>Name: <%= product.productName %></div>
+          <div>Language: <%= product.language %></div>
+          <div>ISBN: <%= product.isbn %></div>
+          <div id="product-price"></div>
+        </div>
+      </div>
+
+      <div class="fill-notice">
+        Please fill in all the fields below, all are required to process your
+        order. Improper completion may result in the cancellation of your order.
+      </div>
+
+      <% if(product.productCode === 'MRS-GT-EN'){ %>
+        <h3>Booking Dates</h3>
+        <div class="alertText">Date format: DD-MM-YYYY</div>
+        <% booking.forEach(element => { %>
+          <div class="bookingDayTag">
+            Day: <%= element.date %>
+            Time: <%= element.time %>Hrs UTC+0
+          </div>
+      <% })} %>
+      
+    </div>
+
+    <%- include('./templates/downArrowSVG') -%>
+  </section>
+
+  <section class="infoArrow">
+    <div class="central-text checkout-max-width">
+      <form
+        id="payment-form"
+        data-secret="{{ clientSecret }}"
+        class="contact-form"
+      >
+      <% if(discount === false){ %>
+        <label for="client-email">e-mail:</label>
+        <input type="email" id="client-email" required />
+        <div id="mail-verif-resp"></div>
+        <div class="buyButton mail-verif-sel" id="validate-mail" onclick="emailCodeGen()">
+          Send Code
+        </div>
+        <label for="client-first-name">First Name:</label>
+        <input type="text" id="client-first-name" required disabled />
+        <label for="client-last-name">Last Name:</label>
+        <input type="text" id="client-last-name" required disabled />
+        <label for="client-country">Country:</label>
+        <input type="text" id="client-country" required disabled />
+        <label for="client-city">City:</label>
+        <input type="text" id="client-city" required disabled />
+        <label for="client-phone">Phone:</label>
+        <input
+          type="text"
+          id="client-phone"
+          oninput="this.value = this.value.replace(/[^0-9-]/g, '')"
+          required
+          disabled
+        />
+        <% } %>
+
+        <div id="payment-element">
+          <!-- Elements will create form elements here -->
+        </div>
+
+        <button class="buyButton" style="margin-top: 1rem">Pay</button>
+
+        <div id="error-messages"></div>
+      </form>
+
+    </div>
+  </section>
+
+  <%- include('./templates/footer') -%>
+  <script src="/js/checkoutScript.js"></script>
+</body>
+</html>

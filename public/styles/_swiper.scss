@@ -1,0 +1,48 @@
+.swiper-container {
+    width: 100%;
+    // height: calc($introWidth/2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.swiper {
+    width: 100%;
+    height: fit-content;
+}
+
+.swiper-slide {
+    width: 100%;
+    height: min-content;
+}
+
+.swiper-slide img {
+    object-fit: scale-down;
+    width: 100%;
+}
+
+.swiper .swiper-button-prev, .swiper .swiper-button-next {
+    color: $colorLightRed;
+}
+
+.swiper .swiper-pagination-bullet-active {
+    background-color: $colorLightRed;
+}
+
+.swiper .goFullScreen {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+    cursor: pointer;
+
+    img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.moveFSI {
+    transform: translateY(3rem);
+}

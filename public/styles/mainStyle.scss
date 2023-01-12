@@ -1,0 +1,53 @@
+@import "variables";
+@import "introAnimation";
+@import "navbar";
+@import "infoArrow";
+@import "downArrow";
+@import "swiper";
+@import "flags";
+@import "footer";
+@import "buttons";
+@import "videoHeader";
+@import "productCard";
+@import "disclaimer";
+@import "productDetail";
+@import "contact";
+@import "calendar";
+@import "sideNavbar";
+@import "header";
+@import "checkout";
+@import "error";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: $fontMontserrat;
+    font-size: $fontRemBase;
+}
+
+body {
+    background-color: $colorBackgroundLight;
+    color: $colorFontLight;
+    min-width: 500px;
+}
+
+a {
+    text-decoration: none;
+    color: $colorFontYellow;
+    transition: all 0.3s;
+}
+
+a:hover {
+    color: $colorFontLightBlue;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: $colorLightRed;
+}
+
+@import "mediaQueries";

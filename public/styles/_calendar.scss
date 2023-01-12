@@ -1,0 +1,191 @@
+#calendar-section {
+  width: 840px;
+  margin: 2rem auto;
+
+  #header {
+    display: flex;
+    justify-content: space-between;
+
+    #monthDisplay {
+      font-size: 1.4rem;
+      font-weight: 600;
+      align-self: center;
+    }
+  }
+
+  #weekdays {
+    display: flex;
+    margin: 1rem 0;
+
+    div {
+      background-color: $colorFontLightBlue;
+      width: 110px;
+      margin: 0 5px;
+      padding: 0.5rem 0;
+      display: flex;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border-radius: 0.25rem;
+
+      &:nth-of-type(6),
+      &:nth-of-type(7) {
+        background-color: $colorLightRed;
+      }
+    }
+  }
+
+  #calendar {
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    .day {
+      width: 110px;
+      height: 110px;
+      margin: 5px;
+      padding: 0.25rem 0 0 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .non-active-day {
+      background-color: $colorBackgroundDark;
+      border-radius: 0.25rem;
+    }
+
+    .current-day {
+      background-color: $colorFontLightBlue;
+      border-radius: 0.25rem;
+      font-weight: 600;
+    }
+
+    .days-ahead {
+      background-color: #777777;
+      border-radius: 0.25rem;
+
+      &:hover {
+        background-color: $colorFontYellow;
+        color: $colorBackgroundDark;
+        cursor: pointer;
+        font-weight: 600;
+
+        .previous-event {
+          color: $colorFontLight;
+        }
+
+        .event {
+          color: $colorFontLight;
+        }
+      }
+
+      .previous-event {
+        background-color: $colorBackgroundDark;
+        border-radius: 0.25rem 0 0 0.25rem;
+        font-size: 0.8rem;
+        padding: 0 0 0 1rem;
+        margin: 0.25rem 0;
+      }
+
+      .event {
+        background-color: $colorLightRed;
+        border-radius: 0.25rem 0 0 0.25rem;
+        font-size: 0.8rem;
+        padding: 0 0 0 1rem;
+        margin: 0.25rem 0;
+      }
+    }
+  }
+}
+
+#modalBackground {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: $colorBackgroundDark, $alpha: 0.7);
+  z-index: 10;
+}
+
+#newEventModal,
+#alertModal {
+  display: none;
+  top: 25%;
+  position: fixed;
+  left: calc(50% - 15rem);
+  background-color: $colorBackgroundLight;
+  width: 30rem;
+  height: max-content;
+  border-radius: 0.5rem;
+  box-shadow: -5px 5px 8px rgba(0, 0, 0, 0.4);
+  z-index: 20;
+}
+
+#alertModal {
+  h3 {
+    margin: 2rem auto;
+    text-align: center;
+    width: 80%;
+  }
+}
+
+#classTime {
+  background: $colorLightRed;
+  border: none;
+  border-radius: 0.1rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: $colorFontLight;
+  margin-left: 1rem;
+  width: min-content;
+  padding: 0.2rem 1rem;
+
+  &:focus {
+    background: none;
+    color: $colorFontLight;
+  }
+
+  &:hover {
+    background-color: #777;
+  }
+}
+
+.alertText {
+  color: $colorFontYellow;
+}
+
+.bookingTable,
+.bookingTableModal {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+
+  h3 {
+    margin-bottom: 1rem;
+    color: $colorLightRed;
+    font-weight: 600;
+  }
+
+  h4 {
+    font-weight: 600;
+    line-height: 1.4rem;
+  }
+}
+
+#fetchPrice {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  h2 {
+    color: $colorFontLight;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+}
+
+.vr {
+  border-left: 2px solid $colorFontLight;
+}

@@ -1,0 +1,73 @@
+<%- include('./templates/head'); -%>
+<body>
+    <section id="header">
+        <%- include('./templates/introAnimation') -%>
+    </section>
+    
+    <%- include('./templates/navbar') -%>
+    <%- include('./templates/sideNavbar') -%>
+
+    <section class="infoArrow" id="firstInfoArrow">
+        <div class="central-text">
+            <p>This is the most complete course to learn NURBS surface modeling with <a href="https://www.rhino3d.com/" target="_blank">Rhinoceros 3D&reg;</a> without plug-ings. A full step by step guide to model a car and master all the techniques needed to become a surface master. </p>
+        </div>
+        <h2>The key Features of this &ee;-book</h2>
+        
+        <div class="central-text">
+            <ul>
+                <li>The input is a simple blueprint and reference photos.</li>
+                <li>Step by step explanation of the entire <a href="https://www.rhino3d.com/" target="_blank">Rhinoceros 3D&reg;</a> modeling process.</li>
+                <li>+1200 pages full of illustrated workflow.</li>
+                <li>More than 110 tools to learn.</li>
+                <li>Explanation of key tools including surface analysis.</li>
+                <li>Icons of all tools used in this book arranged in order of application.</li>
+                <li>No plug-ins needed.</li>
+                <li>At the end of the course you will master surface modeling with <a href="https://www.rhino3d.com/" target="_blank">Rhinoceros 3D&reg;</a>.</li>
+            </ul>
+        </div>
+        <h3>Final model like shown below</h3>
+        <%- include('./templates/downArrowSVG') -%>
+    </section>
+
+    <section class="video-container">
+        <video src="/assets/lr-promo.mp4" class="header-video" muted controls autoplay loop></video>
+    </section>
+
+    <section class="infoArrow">
+        <div>
+            <h2>Checkout the &ee;-Book Inside</h2>
+        </div>
+        <%- include('./templates/downArrowSVG') -%>
+    </section>
+
+    <section>
+        <%- include('./templates/slider') -%>
+    </section>
+
+    <section class="infoArrow">
+
+        <div class="buttons-container">
+            <button class="buyButton" onclick="location.href='./products'">Buy Now!</button>
+            <button class="buyButton" onclick="location.href='/aboutbook'">More Info...</button>
+        </div>
+
+
+        <h2>Worldwide sales to +44 countries</h2>
+
+        <div class="flags-container">
+            <% flags.forEach( flag => { %>            
+                <div class="flag-container">
+                    <span><%=`${flag}`%></span>
+                    <img src=<%=`/assets/flags/${flag}.png`%>>
+                </div>
+            <% }) %>
+        </div>
+    </section>
+
+    <%- include('./templates/footer') -%>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="/js/sideNavbar.js"></script>
+</body>
+</html>

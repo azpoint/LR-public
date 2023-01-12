@@ -1,0 +1,29 @@
+.downArrow {
+    width: 15vw;
+    fill: $colorLightRed;
+    padding: 0;
+    margin: 1rem 0;
+    animation: movingArrow 10s linear infinite;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes movingArrow {
+    0% {
+        transform: translateY(0)
+    }
+    3% {
+        transform: translateY(1vw);
+    }
+    6% {
+        transform: translateY(0);
+    }
+    9% {
+        transform: translateY(1vw);
+    }
+    12% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

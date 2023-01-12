@@ -1,0 +1,33 @@
+#footer {
+    width: 100%;
+    height: calc((100vw/100)*7);
+    background: linear-gradient(180deg, rgba($color: $colorBackgroundDark, $alpha: 0) 0%, rgba($color: $colorBackgroundDark, $alpha: 0.5) 2.5%, rgba($color: $colorBackgroundLight, $alpha: 1) 12%);
+    display: flex;
+    justify-content: center;
+    
+    .footer-container {
+        display: flex;
+        width: 80%;
+        // padding: 1.5rem 0;
+        // margin: 2rem 0;
+        justify-content: space-between;
+
+        a {
+            img {
+                height: 70%;
+                align-self: baseline;
+            }
+        }
+        
+        
+
+        div {
+            width: 60%;
+            // min-width: 40%;
+            height: 80%;
+            text-align: center;
+            margin: 1rem 0 0 1rem;
+            align-self: center;
+        }
+    }
+}

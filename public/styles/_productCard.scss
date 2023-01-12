@@ -1,0 +1,64 @@
+.product-mini-card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: $colorBackgroundLight;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    max-height: calc(7rem + 2rem);
+    cursor: pointer;
+    color: $colorFontLight;
+    font-size: 0.8rem;
+
+    &:hover {
+        transform: scale(.99);
+
+        .learn-more {
+            color: $colorFontLightBlue;
+        }
+    }
+
+    img {
+        width: 7rem;
+        border-radius: 0.25rem;
+    }
+
+    .product-title, .price-tag {
+        margin: 0 0.5rem 0 1rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: $colorFontYellow;
+        max-width: 15rem;
+    }
+
+    .product-details {
+        display: flex;
+        flex-direction: column;
+
+        div {
+            &:nth-of-type(2){
+                margin: 1rem 0 0 0.5rem;
+                align-self: flex-start;
+            }
+            &:nth-of-type(3){
+                margin-top: 1rem;
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .product-description {
+        font-size: 0.9rem;
+        margin: 0 0.5rem;
+        text-align: left;
+
+        &::first-letter {
+            color: $colorLightRed;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    }
+
+}

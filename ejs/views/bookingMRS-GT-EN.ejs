@@ -1,0 +1,168 @@
+<%- include('./templates/head') -%>
+<body>
+  <section class="infoArrow">
+    <div class="central-text">
+      <h2>How to use this Calendar</h2>
+
+      <ul>
+        <li class="alertText">
+          The cost of the tutoring hours will be set according to the UTC+0 time
+          zone and between 06:00 and 22:00 Hrs.
+        </li>
+        <li>You must select 8 different days in a time span of 3 months.</li>
+        <li>
+          Tutoring sessions should be at least 2 days apart.
+          <em
+            >Remember this is a consulting service to guide you through the
+            book, <strong>not to model the whole car with you</strong></em
+          >.
+        </li>
+        <li>
+          You can only book one hour per day and there can only be up to 3
+          tutoring hours booked a day.
+        </li>
+        <li>
+          There is a 50% extra charge for each tutoring hour outside the hours
+          of 6:00 Hrs to 16:00 Hrs UTC+0.
+        </li>
+        <li>There is a 50% extra charge for each tutoring hour on weekends.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="calendar-section">
+    <div id="header">
+      <button id="backButton" class="buyButton">Back</button>
+      <div id="monthDisplay"></div>
+      <button id="nextButton" class="buyButton">Next</button>
+    </div>
+
+    <div id="weekdays">
+      <div>Monday</div>
+      <div>Tuesday</div>
+      <div>Wednesday</div>
+      <div>Thursday</div>
+      <div>Friday</div>
+      <div>Saturday</div>
+      <div>Sunday</div>
+    </div>
+
+    <div id="calendar"></div>
+  </section>
+
+  <section class="infoArrow">
+    <div class="notice central-text">
+      <div id="discountAlertBox">
+        <h3>
+          If you bought the &ee;Book before, you qualify for a $50
+          USD discount.
+        </h3>
+      </div>
+    </div>
+
+    <div id="discountValidatorContainer">
+      <div class="contact-form">
+        <label for="emailDiscount"
+          >Your email inside the &ee;book or the email used for delivery:</label
+        >
+        <input type="email" id="emailDiscount" />
+        <label for="serialDiscount"
+          >Your serial number inside of the &ee;Book:</label
+        >
+        <input
+          type="text"
+          id="serialDiscount"
+          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+        />
+        <button class="buyButton" onclick="fetchDiscount()">
+          Validate Discount
+        </button>
+        <div id="discount-message"></div>
+      </div>
+    </div>
+
+    <div class="central-text">
+      <h2>Your Booking</h2>
+      <ul id="bookingInfo">
+        <li class="alertText">
+          The suggested local time is only a recommendation based on the current
+          local time of your browser/system and does not take into consideration
+          time zone changes that may have your country.
+        </li>
+        <li>The tutoring hours are set in UTC+0</li>
+        <li>All dates in the DD-MM-YYYY format</li>
+      </ul>
+
+      <div class="bookingTable">
+        <div id="bookingDate">
+          <h3>Booking Date (UTC+0)</h3>
+        </div>
+        <div class="vr"></div>
+        <div id="bookingSuggest">
+          <h3>Suggested Local Time</h3>
+        </div>
+      </div>
+
+      <div id="fetchPrice"></div>
+      <ul style="font-weight: 600; text-align: left"></ul>
+
+      <div style="text-align: center">
+        <a
+          onclick="alertModal(`<h3>Terms & Conditions for the course</h3>
+          <ul style='font-weight: 600; text-align: left; font-size: 0.8rem'>
+            <li>The customer can change up to 2 booking dates up to 48 hours before the date of change.</li>
+            <li>The customer understands digital products are non-refundable.</li>
+            <li>The customer understands there are no refunds or rebooking due to connection problems on customer side. </li>
+            <li>Partial refunds can be requested only for the booking dates, but can only be requested prior to the start of the first booking date. Once the first tutoring has started, it is not possible to request a refund.</li>
+            <li>The client understands the tutor can change or cancel booking dates at any time with prior notification by email.</li>
+            <li>In case the client does not attend the scheduled date (no show), the booking cannot be recovered or refunded.</li>
+            <li>The client accepts these Terms & Conditions may change any time without pior notice.</li>
+          </ul>
+
+          <button onclick='acceptTC()' style='center-text' class='buyButton'>Accept</button>`)"
+          >Read Terms and Conditions</a
+        >
+      </div>
+    </div>
+
+    <div class="buttons-container-calendar" id="buttons-calendar">
+      <button class="buyButton" onclick="clearStorage()">Clear Booking</button>
+    </div>
+  </section>
+
+  <div id="newEventModal">
+    <div class="central-text alertText">
+      <div>
+        <ul id="modalAlert">
+          <li>The tutoring hour will be set in UTC+0 time.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="central-text">
+      <label for="classTime">Select UTC+0 Time:</label>
+      <select name="classTime" id="classTime"></select>
+
+      <div class="bookingTableModal">
+        <div id="bookingDateModal">
+          <h3>Booking (UTC+0)</h3>
+        </div>
+        <div class="vr"></div>
+        <div id="bookingSuggestModal">
+          <h3>Local Time</h3>
+        </div>
+      </div>
+
+      <div class="buttons-container-calendar central-text">
+        <button id="saveEvent" class="buyButton">Save</button>
+        <button id="cancelEvent" class="buyButton">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="alertModal"></div>
+  <div id="modalBackground"></div>
+
+  <%- include('./templates/footer') -%>
+  <script src="/js/bookingMRS-GT-EN.js"></script>
+</body>
+</html>

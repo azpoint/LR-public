@@ -1,0 +1,33 @@
+<%- include('./templates/head') -%>
+<body>
+    <%- include('./templates/navbar') -%>
+    <%- include('./templates/sideNavbar') -%>
+
+    <section id="header" class="infoArrow">
+        <img src="/assets/learn-rhino-logo-1k-curves.png" class="inter-header">
+        <%- include('./templates/downArrowSVG') -%>
+    </section>
+
+
+    <section class="infoArrow">
+        <div class="central-text">
+            <h2>Contact Form</h2>
+
+            <p>Need help with something? leave your message here and it will be answered as soon as possible. All fields are required in order to be able to answer your inquire.</p>
+
+            <form action="/contact" method="post" class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" name="senderName" id="name" required class="name-style" placeholder="Your name...">
+                <label for="email">e-mail:</label>
+                <input type="email" name="senderMail" id="email" required class="email-style" placeholder="The e-mail you'll get a response">
+                <label for="message">Message:</label>
+                <textarea name="senderMessage" id="message" required max="500" min="20" class="message-style" rows="15" placeholder="Write your inquire here..."></textarea>
+                <button type="submit" class="buyButton">Send</button>
+            </form>
+        </div>
+    </section>
+    <%- include('./templates/footer') -%>
+    <script src="/js/navbar.js"></script>
+    <script src="/js/sideNavbar.js"></script>
+</body>
+</html>

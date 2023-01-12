@@ -1,0 +1,230 @@
+@media only screen and (min-width: 1300px) {
+  #sideNavbar-container {
+    display: none;
+  }
+
+  #navbar {
+    height: calc((100vw / 100) * 7);
+    margin: 0 auto;
+
+    .navbarContainer {
+      max-width: 1800px;
+
+      ul li {
+        font-size: 1rem;
+        padding: 1rem 0.8rem 0.8rem 1rem;
+      }
+
+      #menu-items {
+        display: flex;
+        margin: 0 1rem 0 0;
+        padding: 0;
+      }
+
+      .navbarSmallLogo {
+        display: none;
+      }
+
+      .navbarMenuIcon {
+        display: none;
+      }
+    }
+  }
+
+  #WebGL {
+    max-width: 800px;
+  }
+
+  .navbarOffsetMargin {
+    padding-top: calc((100vw / 100) * 7);
+  }
+
+  #footer {
+    height: calc((100vw / 100) * 7);
+
+    .footer-container {
+      a {
+        img {
+          height: 70%;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+        }
+      }
+
+      div {
+        width: 60%;
+      }
+    }
+  }
+}
+
+
+// -------- < 1300 SCREEN --------
+@media only screen and (max-width: 1300px) {
+  #sideNavbar-container {
+    display: none;
+  }
+
+  #navbar {
+    height: calc((100vw / 100) * 8);
+    margin: 0 auto;
+
+    .navbarContainer {
+      max-width: 1800px;
+
+      ul li {
+        font-size: 0.7rem;
+        padding: 1rem 0.4rem 0.4rem 1rem;
+      }
+
+      #menu-items {
+        display: flex;
+        margin: 0 1rem 0 0;
+        padding: 0;
+      }
+
+      .navbarFulllLogo {
+        display: none;
+      }
+
+      .navbarSmallLogo {
+        display: inline-block;
+      }
+
+      .navbarMenuIcon {
+        display: none;
+      }
+    }
+  }
+
+  .navbarOffsetMargin {
+    padding-top: calc((100vw / 100) * 8);
+  }
+
+  .product-mini-card {
+    .product-details {
+      display: none;
+    }
+  }
+
+  #footer {
+    height: calc((100vw / 100) * 8);
+    padding-top: 1rem;
+
+    .footer-container {
+      a {
+        img {
+          height: 80px;
+        }
+      }
+    }
+  }
+}
+
+// --------- < 770 SCREEN ---------
+
+@media only screen and (max-width: 770px) {
+  html {
+    font-size: 16px;
+  }
+
+  #calendar-section{
+    width: 490px;
+
+    #weekdays {
+      div {
+        width: 60px;
+        font-size: 0.6rem;
+      }
+    }
+
+    #calendar {
+      .day {
+        width: 60px;
+        height: 60px;
+      }
+
+      .days-ahead {
+        .event {
+          font-size: 0.6rem;
+        }
+        .previous-event {
+          font-size: 0.6rem;
+        }
+      }
+    }
+
+    
+    
+  }
+
+  #sideNavbar-container {
+    display: flex;
+  }
+
+  #navbar {
+    height: calc((100vw / 100) * 14);
+    margin: 0 auto;
+
+    .navbarContainer {
+      max-width: 1800px;
+
+      ul {
+        display: none;
+      }
+
+      .navbarFulllLogo {
+        display: none;
+      }
+
+      .navbarSmallLogo {
+        display: inline-block;
+      }
+
+      .navbarMenuIcon {
+        display: flex;
+        filter: invert(100%);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .navbarOffsetMargin {
+    padding-top: calc((100vw / 100) * 14);
+  }
+  .notice {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+  }
+
+  .flags-container {
+    display: none;
+  }
+
+  #footer {
+    height: calc((100vw / 100) * 14);
+
+    .footer-container {
+      justify-content: center;
+      flex-wrap: wrap;
+
+      a {
+        img {
+          height: 80px;
+        }
+      }
+      
+
+      div {
+        padding-bottom: 2rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  body {
+    margin: 0 auto;
+  }
+}

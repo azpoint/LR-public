@@ -1,0 +1,31 @@
+<div class="swiper-container">
+
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <!-- SLIDES -->
+      <% for (let i=1; i < 69; i++) { %>
+      <div class="swiper-slide">
+        <img data-src=<%=`/book-preview/MSIR${i}.png`%> class="swiper-lazy">
+        <div data-background="/assets/learn-rhino-logo-1k-curves.png" class="swiper-lazy">
+          <div class="swiper-lazy-preloader"></div>
+        </div>
+      </div>
+      <% } %> ...
+    </div>
+
+
+
+    <div class="goFullScreen">
+      <img src="/assets/expand.png" style="filter: invert(50%)" />
+    </div>
+
+    <!-- PAGINATION -->
+    <div class="swiper-pagination"></div>
+
+    <!-- NAVIGATION -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+
+  </div>
+</div>

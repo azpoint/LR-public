@@ -1,0 +1,54 @@
+<section id="header"><%- include('./templates/head') -%></section>
+<body>
+  <%- include('./templates/navbar') -%> <%- include('./templates/sideNavbar')
+  -%>
+
+  <section id="video-header">
+    <%- include('./templates/introAnimation') -%>
+  </section>
+
+  <section class="infoArrow">
+    <div class="notice">
+      <div class="notice">
+        <h2>Notice</h2>
+        <span>
+          All orders may take up to 3 continuous days to be processed. But don't
+          worry, it is usually a few hours to receive the &ee;book.
+        </span>
+      </div>
+    </div>
+    <div class="central-text">
+      <div class="product-detail">
+        <img src="<%= product.cover %>" />
+        <div class="text-detail">
+          <span>Name: <%= product.productName %></span>
+          <span>Language: <%= product.language %></span>
+          <% if(product.productCode === 'MRS-GT-EN'){ %>
+          <span>*Price: From USD$<%= product.price %></span>
+          <% } else { %>
+          <span>Price: $<%= product.price %> USD</span>
+          <% } %>
+          <span>ISBN: <%= product.isbn %></span>
+          <button
+            class="buyButton"
+            onclick="location.href = `/sales/fpp/<%= product.productCode %>/checkout`"
+          >
+            Buy this one
+          </button>
+        </div>
+      </div>
+      <div class="text-description"><%- product.description %></div>
+    </div>
+
+    <div class="buttons-container">
+      <button class="buyButton" onclick="location.href='/products'">
+        Go back
+      </button>
+    </div>
+  </section>
+
+  <%- include('./templates/footer') -%>
+  <script src="/js/navbar.js"></script>
+  <script src="/js/sideNavbar.js"></script>
+</body>
+<!-- </html> -->

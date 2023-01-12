@@ -1,0 +1,37 @@
+<%- include('./templates/head') -%>
+<body>
+  <section id="header"></section>
+
+  <%- include('./templates/navbar') -%> <%- include('./templates/sideNavbar')-%>
+
+  <section style="background-color: #777">
+    <section class="infoArrow">
+      <div class="central-text checkout-max-width">
+        <div class="product-detail-checkout">
+          <img src="<%= product.cover %>" />
+          <h3>Order Placed #<%= order%></h3>
+
+          <div class="text-detail">
+            <div>Name: <%= product.productName %></div>
+            <div>Language: <%= product.language %></div>
+            <div>Order Number: <%= order %></div>
+          </div>
+        </div>
+
+        <div class="fill-notice">
+          <p>Remember that it can take up to 3 continuous days to deliver the &ee;book, but don't worry, it is usually within a few hours.</p>
+          <p>You will receive an email with all the details of your order at <em><%= email %></em></p>
+        </div>
+
+      </div>
+
+      <h2>Thanks for your order!</h2>
+    </section>
+  </section>
+
+  <%- include('./templates/footer') -%>
+  <script src="/js/navbar.js"></script>
+  <script src="/js/sideNavbar.js"></script>
+  <script src="/js/complete-checkout.js"></script>
+</body>
+<!-- </html> -->

@@ -1,0 +1,45 @@
+<%- include('./templates/head') -%>
+<body>
+  <%- include('./templates/navbar') -%> <%- include('./templates/sideNavbar')
+  -%>
+
+  <section class="video-container" id="header">
+    <%- include('./templates/downArrowSVG') -%>
+    <video
+      src="/assets/basil-review.mp4"
+      class="header-video"
+      autoplay
+      muted
+      loop
+      controls
+    ></video>
+  </section>
+
+  <section class="infoArrow">
+    
+    <div class="disclaimer central-text">
+      <img src="/assets/flags/spain.png" />
+      <div class="notice">
+        <h2>¡AVISO!</h2>
+        <span
+          >Este libro también está en español y puedes adquirirlo aquí.</span
+        >
+      </div>
+    </div>
+
+    <h2 class="left-text">Products:</h2>
+
+    <div class="left-text">
+      <div class="product-list"><%- include('./templates/productCard') -%></div>
+    </div>
+  </section>
+  <%- include('./templates/footer') -%>
+  <script src="/js/navbar.js"></script>
+  <script>
+    function productLink(event) {
+      location.href = `/products/${event.target.id}`;
+    }
+  </script>
+  <script src="/js/sideNavbar.js"></script>
+</body>
+</html>

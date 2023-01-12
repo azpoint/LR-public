@@ -1,0 +1,44 @@
+#error-main-container {
+  margin: 5rem auto;
+  background-color: $colorBackgroundDark;
+  min-width: 400px;
+  max-width: 800px;
+  width: 80%;
+  color: $colorFontLight;
+  border-radius: 0.5rem;
+  padding-bottom: 1.5rem;
+}
+
+#error-central-container {
+  margin: 2rem auto;
+  padding-top: 2rem;
+  width: 80%;
+  height: fit-content;
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    filter: drop-shadow(8px 2px 6px rgba(0, 0, 0, 0.6));
+  }
+
+  h2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: $colorLightRed;
+    font-weight: 600;
+    margin-top: 2rem;
+  }
+
+  .central-text-container {
+    margin: 2rem 0;
+    text-align: center;
+    p {
+      margin: 1rem 0;
+    }
+
+  }
+}

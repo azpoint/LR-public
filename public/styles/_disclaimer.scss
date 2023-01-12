@@ -1,0 +1,45 @@
+.disclaimer {
+  display: flex;
+  background-color: $colorFontYellow;
+  color: $colorBackgroundDark;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  width: 80%;
+
+  div {
+    margin: 1rem;
+
+    img {
+      width: 10rem;
+    }
+
+    h2 {
+      color: $colorLightRed;
+    }
+
+    span {
+      font-weight: 600;
+    }
+  }
+}
+
+.notice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $colorFontYellow;
+  color: $colorBackgroundDark;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  width: 80%;
+  padding: 1rem 0;
+
+  h2 {
+    color: $colorLightRed;
+  }
+
+  span {
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+}

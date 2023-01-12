@@ -1,0 +1,52 @@
+.flags-container {
+    margin: 2rem 0;
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+        .flag-container {
+            background-color: $colorBackgroundLight;
+            margin: 0.5rem 0.25rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.5rem;
+            width: calc($flagWidth + 1rem);
+            height: calc($flagWidth + 1rem);
+            overflow: hidden;
+            padding: 0;
+
+                img {
+                    position: absolute;
+                    width: $flagWidth;
+                    height: $flagWidth;
+                    object-fit: cover;
+                    border-radius: 0.25rem;
+                }
+
+                span {
+                    color: $colorFontLight;
+                    font-size: 0.7rem;
+                    font-weight: bold;
+                    background-color: rgba($color: #000000, $alpha: 0.6);
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all 0.3s;
+                    z-index: 1;
+                    text-transform: uppercase;
+                    padding: 3rem 2rem;
+                    transform: translateX(-100%);
+                }
+        }
+
+}
+
+.flag-container:hover span {
+    transform: translateX(0);
+}

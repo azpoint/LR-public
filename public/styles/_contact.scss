@@ -1,0 +1,40 @@
+.contact-form {
+    max-width: 30rem;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+
+    button {
+        margin: 1rem 0;
+    }
+
+    input, textarea {
+        border: none;
+        border-radius: 0.25rem;
+        margin: 0.5rem 0;
+        background-color: $colorBackgroundLight;
+        padding: 0.5rem;
+        color: $colorFontLight;
+        font-size: 1.2rem;
+        font-weight: 200;
+    }
+
+    input:focus,textarea:focus {
+        outline: none;
+        border-bottom: 3px solid $colorLightRed;
+        width: 100%;
+    }
+
+    .name-style {
+        width: 100%;
+    }
+
+    .email-style {
+        width: 100%;
+    }
+    .message-style {
+        resize: none;
+        width: 100%;
+    }
+}

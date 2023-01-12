@@ -1,0 +1,9 @@
+/node_modules
+.env
+/public/assets
+/public/book-preview
+/public/downloads
+/db/mongo-db
+/db/db-starters
+db-service.bat
+/certificado-ssl-learnrhino

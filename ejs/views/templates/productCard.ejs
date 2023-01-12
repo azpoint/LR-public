@@ -1,0 +1,26 @@
+<% for (obj of productList ) { %>
+<div
+  class="product-mini-card"
+  id="<%= obj.productCode %>"
+  onclick="productLink(event)"
+>
+  <img src="<%= obj.cover %>" id="<%= obj.productCode %>" />
+  <h4 class="product-title" id="<%= obj.productCode %>">
+    <%= obj.productName %>
+  </h4>
+  <div class="product-details">
+    <div class="product-description" id="<%= obj.productCode %>">
+      <%= obj.description.slice(3, 125) %>...
+    </div>
+    <div>ISBN: <%= obj.isbn %></div>
+    <div class="learn-more" id="<%= obj.productCode %>">
+      Click on item to learn more
+    </div>
+  </div>
+
+  <div class="price-tag" id="<%= obj.productCode %>">
+    <% if(obj.productCode === 'MRS-GT-EN'){ %> *Price: From USD $<%= obj.price
+    %> <% } else { %> Price: USD $<%= obj.price %> <% } %>
+  </div>
+</div>
+<% } %>
