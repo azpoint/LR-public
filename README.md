@@ -17,6 +17,7 @@ Booking sub-features are:
 - Alert system for the price increment according to the day and time selected.
 - Discount system for previous clients.
 - Getting the final price from the backend.
+- Interactive checkout form; disabled until email verification.
 
 Backend:
 
