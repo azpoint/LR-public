@@ -27,8 +27,8 @@ Backend:
 - Mongoose for data structure and DB calls.
 - RESTs endpoints to serve the front-end interactive features.
 - email verification system.
-- Tailored email template system for accurate notification info to costumers.
+- Tailored email template system for accurate notification info to customers.
 - Discount verification system.
 - Stripe payment implementation.
-- Download file manger to limit access to costumers.
-- email notification system to remember booking to costumers.
+- Download file manger to limit access to customers.
+- email notification system to remember booking to customers.
